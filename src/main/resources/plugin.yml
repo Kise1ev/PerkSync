@@ -7,4 +7,5 @@ depend:
   - AdvancedMLGRush
 commands:
   perksync:
-    usage: /perksync
+    usage: /perksync reload
+    description: Reload config

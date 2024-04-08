@@ -6,5 +6,5 @@ author: Roman Kiselev
 depend:
   - AdvancedMLGRush
 commands:
-  perks:
+  perksync:
     usage: /perksync

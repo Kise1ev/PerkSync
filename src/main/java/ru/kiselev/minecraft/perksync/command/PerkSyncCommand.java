@@ -44,7 +44,7 @@ public class PerkSyncCommand implements CommandExecutor {
                         return true;
                     }
 
-                    final Inventory sticksInventory = Bukkit.createInventory(null, plugin.getConfig().getInt("command.perksync.sticks.size"), ChatColorUtil.translateCodes(plugin.getConfig().getString("commands.perksync.sticks.name")));
+                    final Inventory sticksInventory = Bukkit.createInventory(null, configFile.getInt("command.perksync.sticks.size"), ChatColorUtil.translateCodes(configFile.getString("commands.perksync.sticks.name")));
                     for (final ItemStack item : PerkConfigUtil.getListItems("sticks")) {
                         sticksInventory.addItem(item);
                     }
@@ -67,7 +67,7 @@ public class PerkSyncCommand implements CommandExecutor {
                         return true;
                     }
 
-                    final Inventory blocksInventory = Bukkit.createInventory(null, plugin.getConfig().getInt("command.perksync.blocks.size"), ChatColorUtil.translateCodes(plugin.getConfig().getString("commands.perksync.blocks.name")));
+                    final Inventory blocksInventory = Bukkit.createInventory(null, configFile.getInt("command.perksync.blocks.size"), ChatColorUtil.translateCodes(configFile.getString("commands.perksync.blocks.name")));
                     for (final ItemStack item : PerkConfigUtil.getListItems("blocks")) {
                         blocksInventory.addItem(item);
                     }
@@ -90,7 +90,7 @@ public class PerkSyncCommand implements CommandExecutor {
                         return true;
                     }
 
-                    final Inventory pickaxesInventory = Bukkit.createInventory(null, plugin.getConfig().getInt("command.perksync.pickaxes.size"), ChatColorUtil.translateCodes(plugin.getConfig().getString("commands.perksync.pickaxes.name")));
+                    final Inventory pickaxesInventory = Bukkit.createInventory(null, configFile.getInt("command.perksync.pickaxes.size"), ChatColorUtil.translateCodes(configFile.getString("commands.perksync.pickaxes.name")));
                     for (final ItemStack item : PerkConfigUtil.getListItems("pickaxes")) {
                         pickaxesInventory.addItem(item);
                     }

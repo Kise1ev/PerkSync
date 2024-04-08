@@ -37,10 +37,6 @@ public class Plugin extends JavaPlugin {
             getLogger().info("File \"config.yml\" has been successfully created and copied!");
         }
 
-        playerSticks = PerkConfigUtil.loadCustomMap("sticks");
-        playerBlocks = PerkConfigUtil.loadCustomMap("blocks");
-        playerPickaxes = PerkConfigUtil.loadCustomMap("pickaxes");
-
         dataFile = new File(getDataFolder() + File.separator + "data.yml");
         dataConfiguration = YamlConfiguration.loadConfiguration(dataFile);
         if (!dataFile.exists()) {
@@ -52,6 +48,10 @@ public class Plugin extends JavaPlugin {
 
             getLogger().info("File \"data.yml\" has been successfully created!");
         }
+
+        playerSticks = PerkConfigUtil.loadCustomMap("sticks");
+        playerBlocks = PerkConfigUtil.loadCustomMap("blocks");
+        playerPickaxes = PerkConfigUtil.loadCustomMap("pickaxes");
 
         Bukkit.getPluginManager().registerEvents(new GameListener(), this);
         getCommand("perksync").setExecutor(new PerkSyncCommand());

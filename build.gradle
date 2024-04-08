@@ -8,6 +8,7 @@ apply plugin: "java"
 apply plugin: "maven-publish"
 apply plugin: "com.github.johnrengelman.shadow"
 
+name = "PerkSync"
 version = "1.0.0"
 group = "ru.kiselev.minecraft.perksync"
 

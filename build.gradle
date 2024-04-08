@@ -1,0 +1,64 @@
+plugins {
+    id "java"
+    id "maven-publish"
+    id "com.github.johnrengelman.shadow" version "8.1.1" apply false
+}
+
+apply plugin: "java"
+apply plugin: "maven-publish"
+apply plugin: "com.github.johnrengelman.shadow"
+
+version = "1.0.0"
+group = "ru.kiselev.minecraft.perksync"
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+
+    maven {
+        name = "spigot"
+        url = uri("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
+    }
+
+    maven {
+        name = "sonatype"
+        url = uri("https://oss.sonatype.org/content/repositories/snapshots/")
+    }
+}
+
+dependencies {
+    compileOnly "org.projectlombok:lombok:1.18.32"
+    annotationProcessor "org.projectlombok:lombok:1.18.32"
+
+    implementation "org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT"
+}
+
+tasks.withType(JavaCompile).configureEach {
+    targetCompatibility = "1.8"
+    sourceCompatibility = "1.8"
+    options.encoding = "UTF-8"
+}
+
+tasks {
+    shadowJar {
+        exclude("META-INF/DEPENDENCIES")
+        exclude("META-INF/LICENSE")
+        exclude("META-INF/LICENSE.txt")
+        exclude("META-INF/NOTICE")
+        exclude("META-INF/NOTICE.txt")
+        exclude("META-INF/maven/**")
+
+        archiveFileName = "${name}.jar"
+        destinationDirectory = file("buildDir\\${version}")
+    }
+
+    build {
+        dependsOn("shadowJar")
+    }
+}
+
+jar {
+    manifest {
+        attributes "Main-Class": "${group}.Plugin"
+    }
+}

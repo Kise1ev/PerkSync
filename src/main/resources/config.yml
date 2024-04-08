@@ -1,0 +1,47 @@
+chat:
+  prefix: "&7[&6PerkSync&7] "
+  command_not_found: "&cCommand not found!"
+command:
+  perksync:
+    in_game: "&cYou're in the game! To change your perk, go to the lobby!"
+    sticks:
+      name: "&r&8В» &6&lChoose your stick!"
+      size: 27
+      no_permission: "&cYou don't have enough rights to choose this stick!"
+      on_remove: "&7You've been removed your &6%stick% &7stick!"
+      on_choose: "&7You have chosen a &6%stick% &7stick!"
+      items:
+        - 262,0,&r&6Arrow,&r&7This available to everyone!,perksync.stick.arrow
+        - 340,0,&r&6Book,&r&7This available to everyone!,perksync.stick.book
+        - 288,0,&r&6Feather,&r&7This a &6Premium &7available!,perksync.stick.feather
+        - 369,0,&r&6Blaze Rod,&r&7This a &6Premium &7available!,perksync.stick.blaze_rod
+        - 352,0,&r&6Bone,&r&7This a &6Premium &7available!,perksync.stick.bone
+        - 293,0,&r&6Diamond Hoe,&r&7This a &6Premium &7available!,perksync.stick.diamond_hoe
+        - 276,0,&r&6Diamond Sword,&r&7This a &6Premium &7available!,perksync.stick.diamond_sword
+    blocks:
+      name: "&r&8В» &6&lChoose your block!"
+      size: 27
+      no_permission: "&cYou don't have enough rights to choose this block!"
+      on_remove: "&7You've been removed your &6%block% &7block!"
+      on_choose: "&7You have chosen a &6%block% &7block!"
+      items:
+        - 179,0,&r&6Red Sandstone,&r&7This available to everyone!,perksync.block.red_sandstone
+        - 155,0,&r&6Quartz,&r&7This a &6Premium &7available!,perksync.block.quartz
+        - 1,0,&r&6Stone,&r&7This a &6Premium &7available!,perksync.block.stone
+        - 45,0,&r&6Bricks,&r&7This a &6Premium &7available!,perksync.block.bricks
+        - 168,0,&r&6Prismarine,&r&7This a &6Premium &7available!,perksync.block.prismarine
+        - 172,0,&r&6Hardened Clay,&r&7This a &6Premium &7available!,perksync.block.hardened_clay
+        - 112,0,&r&6Nether Brick,&r&7This a &6Premium &7available!,perksync.block.nether_brick
+    pickaxes:
+      name: "&r&8В» &6&lChoose your pickaxe!"
+      size: 27
+      no_permission: "&cYou don't have enough rights to choose this pickaxe!"
+      on_remove: "&7You've been removed your &6%pickaxe% &7pickaxe!"
+      on_choose: "&7You have chosen a &6%pickaxe% &7pickaxe!"
+      items:
+        - 270,0,&r&6Wooden Pickaxe,&r&7This available to everyone!,perksync.pickaxe.wood
+        - 274,0,&r&6Stone Pickaxe,&r&7This available to everyone!,perksync.pickaxe.stone
+        - 285,0,&r&6Golden Pickaxe,&r&7This available to everyone!,perksync.pickaxe.gold
+        - 278,0,&r&6Diamond Pickaxe,&r&7This available to everyone!,perksync.pickaxe.diamond
+    reload:
+      message: "&aConfig has been successfully reloaded!"

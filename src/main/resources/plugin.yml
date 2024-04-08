@@ -1,0 +1,10 @@
+name: PerkSync
+main: ru.kiselev.minecraft.perksync.Plugin
+version: 1.0.0
+description: AdvancedMLGRush addon
+author: Roman Kiselev
+depend:
+  - AdvancedMLGRush
+commands:
+  perks:
+    usage: /perksync
